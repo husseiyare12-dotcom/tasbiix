@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasbiix Emoji Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    /* background: linear-gradient(#2e77ff, #0d47a1); */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+.box {
+    background: white;
+    padding: 40px 25px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+
+#number {
+    font-size: clamp(50px, 12vw, 80px);
+    margin: 10px 0;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 15px 5px;
+    border: none;
+    border-radius: 12px;
+    font-size: clamp(20px, 5vw, 28px);
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+#plus { background: #e297c0; color: white; }
+#minus { background: #757575; color: white; }
+#reset { background: #b49450; color: white; }
+
+button:active {
+    transform: scale(0.92);
+}
+
+.emoji {
+    font-size: clamp(40px, 10vw, 60px);
+    margin-bottom: 10px;
+    height: 60px;
+}
+</style>
+<body>
+
+    <div class="box">
+        <div class="emoji" id="emoji"></div>
+        <h1 id="number">0</h1>
+
+        <div class="btns">
+            <button id="plus">+</button>
+            <button id="minus">-</button>
+            <button id="reset">X</button>
+        </div>
+    </div>
+
+<script src="tasbiix.js"></script>
+</body>
+</html>
